@@ -5,13 +5,16 @@ const DoctorsPage = require('./../po/pages/doctors.page');
 const dashboardPage = new DashboardPage();
 const doctorsPage = new DoctorsPage();
 
+const { pages } = require('./../po');
+
 
 describe('Medical application', () => {
 
   beforeEach(async () => {   
     
     // 1. Go to Main page
-    await dashboardPage.open();
+    // await dashboardPage.open();
+    await pages('dashboard').open();
 
   });
 
@@ -24,7 +27,8 @@ describe('Medical application', () => {
   it('Open modal window for adding a new doctor', async () => {
 
     // Click on doctors item on the side menu
-    await dashboardPage.sideMenu.item('doctors').click();
+    // await dashboardPage.sideMenu.item('doctors').click();
+    await pages('dashboard').sideMenu.item('doctors').click();
 
     // Click on add new doctor btn
     // await $('.specialization-types button.e-control').click();
