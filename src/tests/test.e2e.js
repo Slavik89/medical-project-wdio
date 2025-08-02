@@ -32,11 +32,14 @@ describe('Medical application', () => {
 
     // Click on add new doctor btn
     // await $('.specialization-types button.e-control').click();
-    await doctorsPage.doctorListHeader.addNewDoctorBtn.click();    
+    // await doctorsPage.doctorListHeader.addNewDoctorBtn.click();   
+    await pages('doctors').doctorListHeader.addNewDoctorBtn.waitForExist();
+    await pages('doctors').doctorListHeader.addNewDoctorBtn.waitForClickable();
+    await pages('doctors').doctorListHeader.addNewDoctorBtn.click();
 
-    // Check that a modal window is displayed
     // await expect($('.new-doctor-dialog')).toBeDisplayed();
-    await expect(doctorsPage.addDoctorModal.rootEl).toBeDisplayed();
+    // await browser.pause(4000);
+    await expect(pages('doctors').addDoctorModal.rootEl).toBeDisplayed();
 
   });
 

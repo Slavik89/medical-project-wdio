@@ -9,9 +9,9 @@ const DoctorsPage = require("./doctors.page");
 
 function pages(name) {
 
-  items = {
-    doctors: new DoctorsPage(),
-    dashboard: new DashboardPage()
+  items = {   
+    dashboard: new DashboardPage(),
+    doctors: new DoctorsPage()
   }
 
   return items[name.toLowerCase()];
