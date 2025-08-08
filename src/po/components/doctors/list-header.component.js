@@ -14,15 +14,6 @@ class ListHeaderComponent extends BaseComponent {
     return $('button.e-control');
   }
 
-  getDoctorSelectors(param) {
-    const selectors = {
-      name: '[name="Name"]',
-      schedule: '[routerLink="/calendar"]',
-      doctors: '[routerLink="/doctors"]',
-    }
-
-    return this.rootEl.$(selectors[param.toLowerCase()]);
-  }
 }
 
 module.exports = ListHeaderComponent;
