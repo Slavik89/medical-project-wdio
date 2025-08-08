@@ -85,7 +85,8 @@ describe('Medical application', () => {
 
     await expect(pages('doctors').addDoctorModal.rootEl).not.toBeDisplayed();
 
-    await expect($('#Specialist_8').$('.name')).toHaveText('Dr. John Jackson');
+    // await expect($('#Specialist_8').$('.name')).toHaveText('Dr. John Jackson');
+    await expect(pages('doctors').specialistCard(8).name).toHaveText('Dr. John Jackson');
 
   });
 

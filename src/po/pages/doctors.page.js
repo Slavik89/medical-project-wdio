@@ -2,7 +2,7 @@
 const AddDoctorComponent = require("../components/doctors/add-doctor.component"); */
 const BasePage = require("./base.page");
 
-const { AddDoctorModal, DoctorListHeader } = require('./../components');
+const { AddDoctorModal, DoctorListHeader, SpecialistCard } = require('./../components');
 
 class DoctorsPage extends BasePage {
 
@@ -11,6 +11,10 @@ class DoctorsPage extends BasePage {
     this.doctorListHeader = new DoctorListHeader();
     this.addDoctorModal = new AddDoctorModal();
   } 
+
+  specialistCard(id) {
+    return new SpecialistCard(id);
+  }
 
 }
 
